@@ -2,7 +2,7 @@
 This is the source for my online progressive web application (PWA) at
 https://ogh.am. Checkout the screenshots of it on iOS and Android of it below!
 
-![](https://raw.githubusercontent.com/evanshortiss/ogh.am/master/screenshots/android-ios.png)
+![](https://github.com/evanshortiss/ogh.am/raw/master/screenshots/android-ios.png)
 
 
 ## About
