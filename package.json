@@ -1,0 +1,41 @@
+{
+  "name": "ogham",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "npm run format",
+    "format": "prettier --write --single-quote public/**/*.js public/*.js src/**/*.ts src/**/*.tsx src/*.tsx src/*.ts",
+    "start": "concurrently 'webpack --config webpack.dev.js --watch' 'http-server -p 3030 ./public'",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "author": "Evan Shortiss <evanshortiss@gmail.com> (http://evanshortiss.com/)",
+  "dependencies": {
+    "@types/events": "~1.2.0",
+    "@types/lodash": "~4.14.104",
+    "clipboard-copy": "~1.4.2",
+    "diacritics": "~1.3.0",
+    "events": "~2.0.0",
+    "ogham": "~0.2.0",
+    "preact": "~8.2.7",
+    "prettier": "~1.11.1"
+  },
+  "devDependencies": {
+    "babel-core": "~6.26.0",
+    "babel-loader": "~7.1.4",
+    "babel-preset-env": "~1.6.1",
+    "concurrently": "~3.5.1",
+    "copy-webpack-plugin": "~4.5.1",
+    "firebase-tools": "~3.17.6",
+    "http-server": "~0.11.1",
+    "ts-loader": "~3.5.0",
+    "typescript": "~2.7.2",
+    "uglifyjs-webpack-plugin": "~1.2.4",
+    "webpack": "~3.11.0",
+    "webpack-bundle-analyzer": "~2.11.1",
+    "webpack-cli": "~1.5.3",
+    "webpack-merge": "~4.1.2"
+  }
+}

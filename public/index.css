@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "BabelStone Ogham";
+	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+header a h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-device-width: 480px) {
+  .row button, .row a {
+    min-width: 70vw;
+    padding: 0.75em;
+    height: inherit;
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  .row button, .row a {
+    min-width: 170px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+#ogham-input form input {
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+#ogham-output .row {
+  text-align: center;
+  max-width: 600px;
+  margin: 2em auto 0 auto;
+}
+
+#ogham-example p {
+  display: inline-block;
+  margin: 0rem auto 2rem;
+  font-size: 36pt;
+}
+
+.vertical {
+  writing-mode: tb-rl;
+  transform: rotate(180deg)
+}
+
+#ogham-output h2 {
+  margin: 0em auto 1em auto;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+.svg-icon svg {
+  color: white;
+  font-size: 12pt;
+  bottom: -0.175em;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+}
