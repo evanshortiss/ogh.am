@@ -42,10 +42,12 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
   }
 
   copyOghamToClipboard() {
+    this.props.state.setPopupMessage('Ogham text copied to the clipboard  🎉')
     copy(this.getTextAsOgham());
   }
 
   copyLinkToClipboard() {
+    this.props.state.setPopupMessage('Shareable URL copied to the clipboard  👍')
     copy(`${window.location.origin}?text=${this.state.plaintext}`);
   }
 

@@ -1,9 +1,8 @@
-/// <reference path="../diacritics.d.ts" />
-
 import { h, Component } from 'preact';
 import { AppState } from './state';
 import { isMobileDevice } from './util';
-import * as diacritics from 'diacritics';
+import { remove } from 'diacritics';
+import { parse } from 'querystring'
 
 interface OghamInputProps {
   state: AppState;
@@ -15,9 +14,13 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
   constructor(props: OghamInputProps) {
     super(props);
 
-    setTimeout(() => {
-      this.props.state.setInputText('ireland');
-    }, 250);
+    let text =  parse(window.location.search.replace('?', '')).text
+
+    if (!text || typeof text !== 'string') {
+      text = 'ireland'
+    }
+
+    this.props.state.setInputText(text);
   }
 
   onChange(e: Event) {
@@ -30,7 +33,7 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
       );
     };
 
-    this.props.state.setInputText(diacritics.remove(el.value));
+    this.props.state.setInputText(remove(el.value));
   }
 
   handleSubmit(e: Event) {

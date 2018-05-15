@@ -89,3 +89,69 @@ input.invalid {
   height: 1em;
   width: 1em;
 }
+
+.popup .content {
+  z-index: 10;
+  position: fixed;
+  background: #2c3e50;
+  color: white;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0rem 0.25rem 1rem #555;
+  font-size: 1.4rem;
+  top: 7.5vh;
+  /* margin: auto; */
+  padding: 1rem;
+}
+
+.popup p {
+  margin: 1.25rem;
+}
+
+.popup .content {
+  -webkit-animation: fade 3s ease-in 1;
+  animation: fade 3s ease-in 1;
+}
+
+
+
+@media screen and (max-device-width: 480px) {
+  .popup .content {
+    width: 80vw;
+  }
+
+  @-webkit-keyframes fade {
+    0% { left: -82vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -82vw; }
+  }
+
+  @keyframes fade {
+    0% { left: -82vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -82vw; }
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  .popup .content {
+    width: 25vw;
+    left: -31vw;
+  }
+
+  @-webkit-keyframes fade {
+    0% { left: -28vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -28vw; }
+  }
+
+  @keyframes fade {
+    0% { left: -28vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -28vw; }
+  }
+}
