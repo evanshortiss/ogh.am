@@ -60,7 +60,7 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
     return (
       <div class="center">
         <div>
-          <h2 style={"font-family: 'BabelStone Ogham'"}>
+          <h2 class="vertical" style={"font-family: 'BabelStone Ogham'"}>
             {this.getTextAsOgham()}
           </h2>
         </div>
@@ -91,7 +91,6 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
                 </svg>
               </i>
             </a>
-            {/* <button onClick={(e) => this.downloadImage()} class="button-primary">Download File <i class="svg-icon"><Download/></i></button> */}
           </div>
           <div class="four columns">
             <button
