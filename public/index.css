@@ -3,6 +3,10 @@
 	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
 }
 
+body {
+  font-size: 1.7rem;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
 }
