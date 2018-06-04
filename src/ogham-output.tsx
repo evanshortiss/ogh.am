@@ -61,7 +61,7 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
   render(props: OghamOutputProps, state: OghamOutputState) {
     return (
       <div class="center">
-        <div>
+        <div style="display: inline-grid;">
           <h2 class="vertical" style={"font-family: 'BabelStone Ogham'"}>
             {this.getTextAsOgham()}
           </h2>
