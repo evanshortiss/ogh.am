@@ -55,12 +55,6 @@ form {
   font-size: 36pt;
 }
 
-.instagrams iframe {
-  margin: 2vh auto !important;
-  max-width: 300px !important;
-  display: inline-block !important;
-}
-
 .vertical {
   writing-mode: tb-rl;
   transform: rotate(180deg)
