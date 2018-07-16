@@ -18,10 +18,6 @@ export class AppState extends EventEmitter {
 
     this.emit('update');
   }
-
-  setPopupMessage (msg: string) {
-    this.emit('popup', msg)
-  }
 }
 
 let instance: AppState;

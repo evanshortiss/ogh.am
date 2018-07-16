@@ -3,16 +3,72 @@
 	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
 }
 
+button.button-primary, .button.button-primary {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+button.button-primary:focus, .button.button-primary:focus, button.button-primary:hover, .button.button-primary:hover {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.header-image {
+  text-align: center;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/ogham.jpg");
+}
+
+.header-image h3 {
+  color: white;
+  padding: 10%;
+  text-shadow: 0 0 1px black;
+  margin: 0 auto;
+}
+
 body {
   font-size: 1.7rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2em !important;
+}
+
+footer div {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 11pt;
+  color: rgba(0,0,0, 0.5);
+  text-align: center;
 }
 
 * {
   -webkit-font-smoothing: antialiased;
 }
 
-header a h2 {
-  margin-bottom: 1rem;
+header {
+  background: #2ecc71;
+}
+
+header a {
+  color: white !important;
+  text-decoration: none;
+}
+
+header img {
+  display: inline-block;
+  width: 2rem !important;
+  margin-left: 1rem;
+}
+
+header h3 {
+  margin: 0.75rem;
+  vertical-align: super;
+  display: inline-block;
 }
 
 form {
@@ -20,6 +76,14 @@ form {
 }
 
 @media screen and (max-device-width: 480px) {
+  .header-image {
+    height: 40vh;
+  }
+
+  header img {
+    width: 23vw;
+  }
+
   .row button, .row a {
     min-width: 70vw;
     padding: 0.75em;
@@ -28,6 +92,18 @@ form {
 }
 
 @media screen and (min-device-width: 960px) {
+  .header-image {
+    height: 55vh;
+  }
+
+  .header-image h3 {
+    max-width: 15em;
+  }
+
+  header img {
+    width: 9vw;
+  }
+
   .row button, .row a {
     min-width: 170px;
   }
@@ -36,7 +112,6 @@ form {
 .center {
   text-align: center;
 }
-
 #ogham-input form input {
   font-size: 14pt;
   text-align: center;
@@ -57,11 +132,8 @@ form {
 
 .vertical {
   writing-mode: tb-rl;
-  transform: rotate(180deg)
-}
-
-#ogham-output h2 {
-  margin: 0em auto 1em auto;
+  transform: rotate(180deg);
+  /* -webkit-transform: rotate(-90deg); */
 }
 
 input.invalid {
@@ -84,35 +156,7 @@ input.invalid {
   width: 1em;
 }
 
-.popup .content {
-  z-index: 10;
-  position: fixed;
-  background: #2c3e50;
-  color: white;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  box-shadow: 0rem 0.25rem 1rem #555;
-  font-size: 1.4rem;
-  top: 7.5vh;
-  /* margin: auto; */
-  padding: 1rem;
-}
-
-.popup p {
-  margin: 1.25rem;
-}
-
-.popup .content {
-  -webkit-animation: fade 3s ease-in 1;
-  animation: fade 3s ease-in 1;
-}
-
-
-
 @media screen and (max-device-width: 480px) {
-  .popup .content {
-    width: 80vw;
-  }
 
   @-webkit-keyframes fade {
     0% { left: -82vw; }
@@ -130,11 +174,6 @@ input.invalid {
 }
 
 @media screen and (min-device-width: 960px) {
-  .popup .content {
-    width: 25vw;
-    left: -31vw;
-  }
-
   @-webkit-keyframes fade {
     0% { left: -28vw; }
     12% { left: 0; }

@@ -8,10 +8,21 @@
       "**/node_modules/**",
       "**/src/**"
     ],
+    "headers": [
+      {
+        "source": "service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "build/index.html"
       }
     ]
   }

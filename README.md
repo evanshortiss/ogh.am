@@ -1,12 +1,22 @@
-# ogh.am
+<h1 align="center">
+  Ogham
+</h1>
+<h3 align="center">ᚆᚓᚂᚂᚑ</h3>
+<h3 align="center">
+  <a href="https://ogh.am">ogh.am</a>
+</h3>
+
+## Usage
+You can view the live website at [ogh.am](https://ogh.am) and easily
+transliterate latin characters to Ogham.
+
+## About
 This is the source for my online ogham transliterator progressive web
 application (PWA) at https://ogh.am. Checkout the screenshots of it on iOS and
 Android below!
 
 ![](https://github.com/evanshortiss/ogh.am/raw/master/screenshots/android-ios.png)
 
-
-## About
 I built this as a learning exercise for modern web tooling and PWAs and because
 it was fun. I wanted to make it work entirely offline, including the generation
 of an ogham image that could be downloaded on desktop and mobile - this was
@@ -44,3 +54,6 @@ by issuing the following commands:
 $ npm install
 $ npm start
 ```
+
+Changes to anything in the `src/` folder are watched and automatically compiled,
+so just refresh or force refresh to view changes.
