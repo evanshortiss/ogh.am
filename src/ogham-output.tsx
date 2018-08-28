@@ -21,11 +21,11 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
     this.setState({ plaintext: this.props.state.getInputText() });
 
     // Refresh the UI on state change
-    this.props.state.on('update', () => {
+    this.props.state.setCallback(() => {
       this.setState({
         plaintext: this.props.state.getInputText()
       });
-    });
+    })
   }
 
   downloadImage(e: Event) {

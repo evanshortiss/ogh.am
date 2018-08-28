@@ -34,14 +34,16 @@ The code used to generate the ogham text is available via
 Enjoy, and feel free to give feedback or make PRs and Issues.
 
 ## Technologies
-This web application was developed using the following:
+This web application was developed with ❤️ using the following:
 
-* Preact
-* TypeScript
-* webpack
-* Prettier
-* Firebase
-* BabelStone Fonts
+* [Preact](https://preactjs.com/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [webpack](https://webpack.js.org/)
+* [Prettier](https://prettier.io/)
+* [Firebase](https://firebase.google.com/)
+* [Workbox](https://developers.google.com/web/tools/workbox/)
+* [BabelStone Fonts](http://www.babelstone.co.uk/Ogham/)
+* [Skeleton](http://getskeleton.com/)
 
 See the `package.json` for a full list of dependencies.
 

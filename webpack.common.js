@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve('./public'),
     publicPath: '/',
-    filename: "js/bundle.[hash].js",
+    filename: "bundle.[hash].js",
   },
   resolve: {
     extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
@@ -31,14 +31,11 @@ module.exports = {
     ]
   },
   plugins:[
-    // new CleanWebpackPlugin(
-    //   [
-    //     'dist/'
-    //   ],
-    //   {
-
-    //   }
-    // )
+    new CleanWebpackPlugin([
+      'public/index.*.css',
+      'public/bundle.*.js',
+      'public/precache-manifest.*.js'
+    ]),
     new ExtractTextPlugin('index.[hash].css'),
     new HtmlWebpackPlugin({
       minify: {

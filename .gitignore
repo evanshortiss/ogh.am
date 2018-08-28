@@ -2,6 +2,7 @@
 public/bundle.*.js
 public/index.*.css
 public/index.html
+public/sw.js
 precache-manifest.*
 
 node_modules

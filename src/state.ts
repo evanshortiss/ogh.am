@@ -1,12 +1,13 @@
-import { EventEmitter } from 'events';
-
-export class AppState extends EventEmitter {
-  private inputText: string;
+export class AppState {
+  private inputText: string
+  private callback: Function;
 
   constructor() {
-    super();
-
     this.inputText = 'ireland';
+  }
+
+  setCallback (fn: Function) {
+    this.callback = fn
   }
 
   getInputText() {
@@ -16,7 +17,9 @@ export class AppState extends EventEmitter {
   setInputText(text: string) {
     this.inputText = text;
 
-    this.emit('update');
+    if (this.callback) {
+      this.callback('update');
+    }
   }
 }
 
