@@ -65,10 +65,12 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
 
   copyOghamToClipboard() {
     copy(this.getTextAsOgham());
+    alert(`Copied ${this.getTextAsOgham()} to clipboard!`)
   }
 
   copyLinkToClipboard() {
     copy(`${window.location.origin}?text=${this.state.plaintext}`);
+    alert(`Copied link to clipboard!`)
   }
 
   getTextAsOgham() {
