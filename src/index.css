@@ -20,7 +20,7 @@ button.button-primary:focus, .button.button-primary:focus, button.button-primary
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -275px;
-  background-image: url("img/connemara-national-park.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("img/connemara-national-park.jpg");
 }
 
 .header-image h3 {
