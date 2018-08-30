@@ -1,13 +1,13 @@
 export class AppState {
-  private inputText: string
+  private inputText: string;
   private callback: Function;
 
   constructor() {
     this.inputText = 'ireland';
   }
 
-  setCallback (fn: Function) {
-    this.callback = fn
+  setCallback(fn: Function) {
+    this.callback = fn;
   }
 
   getInputText() {

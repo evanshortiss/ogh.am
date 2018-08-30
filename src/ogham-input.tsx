@@ -13,17 +13,17 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
   constructor(props: OghamInputProps) {
     super(props);
 
-    const queryParts = window.location.search.replace('?', '').split('&')
-    const textQueryPart = queryParts.filter((q) => {
-      const key = q.split('=')[0]
+    const queryParts = window.location.search.replace('?', '').split('&');
+    const textQueryPart = queryParts.filter(q => {
+      const key = q.split('=')[0];
 
-      return key === 'text'
-    })
+      return key === 'text';
+    });
 
-    let text = textQueryPart[0] ? textQueryPart[0].split('=')[1] : ''
+    let text = textQueryPart[0] ? textQueryPart[0].split('=')[1] : '';
 
     if (!text || typeof text !== 'string') {
-      text = 'ireland'
+      text = 'ireland';
     }
 
     this.props.state.setInputText(text);
@@ -40,10 +40,10 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
       (this as any).setCustomValidity(
         'Input only supports a-z characters and á, é, í, ó, and ú.'
       );
-    }
+    };
 
-    const form = (e.target as HTMLElement).parentElement as HTMLFormElement
-    const valid = form.reportValidity()
+    const form = (e.target as HTMLElement).parentElement as HTMLFormElement;
+    const valid = form.reportValidity();
 
     if (!valid) {
       // Do not show any Ogham, this avoids confusion hopfully

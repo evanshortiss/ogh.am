@@ -3,7 +3,7 @@ import { OghamInput } from './ogham-input';
 import { OghamOutput } from './ogham-output';
 import getAppState from './state';
 
-import './index.css'
+import './index.css';
 
 if (navigator && navigator.serviceWorker) {
   // Use the window load event to keep the page load performant
