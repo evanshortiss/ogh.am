@@ -77,8 +77,7 @@ form {
 
 @media screen and (max-device-width: 480px) {
   .header-image {
-    height: 37.5vh;
-    background-image: url("img/connemara-national-park.dark.jpg");
+    /* height: 37.5vh; */
   }
 
   .header-image h3 {
@@ -96,15 +95,7 @@ form {
   }
 }
 
-@media screen and (max-device-width: 768px) {
-  .header-image {
-  }
-}
-
 @media screen and (min-device-width: 960px) {
-  .header-image {
-  }
-
   .header-image h3 {
     max-width: 15em;
   }
@@ -115,16 +106,6 @@ form {
 
   .row button, .row a {
     min-width: 170px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header-image {
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-image {
   }
 }
 
