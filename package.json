@@ -18,8 +18,7 @@
     "diacritics": "~1.3.0",
     "ogham": "~0.2.0",
     "preact": "~8.2.7",
-    "prettier": "~1.11.1",
-    "qs": "~6.5.2"
+    "prettier": "~1.11.1"
   },
   "devDependencies": {
     "@types/diacritics": "~1.3.1",

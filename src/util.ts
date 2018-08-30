@@ -1,5 +1,5 @@
 export function isAppleMobileDevice() {
-  return navigator.userAgent.match(/iphone|ipad|ipad/gi) ? true : false;
+  return navigator.userAgent.match(/iphone|ipad|ipod/gi) ? true : false;
 }
 
 export function isAndroidMobileDevice() {

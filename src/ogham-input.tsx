@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 import { AppState } from './state';
 import { isMobileDevice } from './util';
 import { remove } from 'diacritics';
-import { parse } from 'querystring'
 
 interface OghamInputProps {
   state: AppState;
@@ -14,7 +13,14 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
   constructor(props: OghamInputProps) {
     super(props);
 
-    let text =  parse(window.location.search.replace('?', '')).text
+    const queryParts = window.location.search.replace('?', '').split('&')
+    const textQueryPart = queryParts.filter((q) => {
+      const key = q.split('=')[0]
+
+      return key === 'text'
+    })
+
+    let text = textQueryPart[0] ? textQueryPart[0].split('=')[1] : ''
 
     if (!text || typeof text !== 'string') {
       text = 'ireland'

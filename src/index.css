@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "BabelStone Ogham";
-	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.subset.woff") format("woff");
+	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
 }
 
 button.button-primary, .button.button-primary {
@@ -19,8 +19,7 @@ button.button-primary:focus, .button.button-primary:focus, button.button-primary
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0px -275px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("img/connemara-national-park.jpg");
+  background-image: url("img/connemara-national-park.dark.jpg");
 }
 
 .header-image h3 {
@@ -79,8 +78,7 @@ form {
 @media screen and (max-device-width: 480px) {
   .header-image {
     height: 37.5vh;
-    background-position: 0px 0px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("img/connemara-national-park.jpg");
+    background-image: url("img/connemara-national-park.dark.jpg");
   }
 
   .header-image h3 {
@@ -98,10 +96,13 @@ form {
   }
 }
 
+@media screen and (max-device-width: 768px) {
+  .header-image {
+  }
+}
+
 @media screen and (min-device-width: 960px) {
   .header-image {
-    height: 47.5vh;
-    background-position: 0px -275px;
   }
 
   .header-image h3 {
@@ -114,6 +115,16 @@ form {
 
   .row button, .row a {
     min-width: 170px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-image {
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-image {
   }
 }
 
