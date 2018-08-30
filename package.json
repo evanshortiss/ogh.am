@@ -4,7 +4,7 @@
   "description": "This is the source for my online ogham transliterator progressive web application (PWA) at https://ogh.am. Checkout the screenshots of it on iOS and Android below!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"no tests specified\"",
     "precommit": "npm run format",
     "format": "prettier --write --single-quote public/**/*.js public/*.js src/**/*.ts src/**/*.tsx src/*.tsx src/*.ts",
     "start": "concurrently 'webpack --config webpack.dev.js --watch' 'http-server -p 3030 -c0 ./public'",
@@ -36,6 +36,7 @@
     "firebase-tools": "~3.17.6",
     "html-webpack-plugin": "~3.2.0",
     "http-server": "~0.11.1",
+    "husky": "~0.14.3",
     "optimize-css-assets-webpack-plugin": "~3.2.0",
     "style-loader": "~0.21.0",
     "ts-loader": "~3.5.0",
