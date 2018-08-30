@@ -1,0 +1,190 @@
+@font-face {
+	font-family: "BabelStone Ogham";
+	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
+}
+
+button.button-primary, .button.button-primary {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+button.button-primary:focus, .button.button-primary:focus, button.button-primary:hover, .button.button-primary:hover {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.header-image {
+  text-align: center;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("img/connemara-national-park.dark.jpg");
+}
+
+.header-image h3 {
+  color: white;
+  padding: 10%;
+  text-shadow: 0 0 1px black;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1.7rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2em !important;
+}
+
+footer div {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 11pt;
+  color: rgba(0,0,0, 0.5);
+  text-align: center;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  background: #2ecc71;
+}
+
+header a {
+  color: white !important;
+  text-decoration: none;
+}
+
+header img {
+  display: inline-block;
+  width: 2rem !important;
+  margin-left: 1rem;
+}
+
+header h3 {
+  margin: 0.75rem;
+  vertical-align: super;
+  display: inline-block;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-device-width: 480px) {
+  .header-image {
+    /* height: 37.5vh; */
+  }
+
+  .header-image h3 {
+    margin-top: 3vh;
+  }
+
+  header img {
+    width: 23vw;
+  }
+
+  .row button, .row a {
+    min-width: 70vw;
+    padding: 0.75em;
+    height: inherit;
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  .header-image h3 {
+    max-width: 15em;
+  }
+
+  header img {
+    width: 9vw;
+  }
+
+  .row button, .row a {
+    min-width: 170px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+#ogham-input form input {
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+#ogham-output .row {
+  text-align: center;
+  max-width: 600px;
+  margin: 2em auto 0 auto;
+}
+
+#ogham-example p {
+  display: inline-block;
+  margin: 0rem auto 2rem;
+  font-size: 36pt;
+}
+
+.vertical {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  /* -webkit-transform: rotate(-90deg); */
+}
+
+input.invalid {
+  border-color: red;
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+.svg-icon svg {
+  color: white;
+  font-size: 12pt;
+  bottom: -0.175em;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+}
+
+@media screen and (max-device-width: 480px) {
+
+  @-webkit-keyframes fade {
+    0% { left: -82vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -82vw; }
+  }
+
+  @keyframes fade {
+    0% { left: -82vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -82vw; }
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  @-webkit-keyframes fade {
+    0% { left: -28vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -28vw; }
+  }
+
+  @keyframes fade {
+    0% { left: -28vw; }
+    12% { left: 0; }
+    92% { left: 0; }
+    100% { left: -28vw; }
+  }
+}

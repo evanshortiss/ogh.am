@@ -1,11 +1,15 @@
 import { h, render } from 'preact';
 import { OghamInput } from './ogham-input';
 import { OghamOutput } from './ogham-output';
-import { Popup } from './popup';
 import getAppState from './state';
 
+import './index.css';
+
 if (navigator && navigator.serviceWorker) {
-  navigator.serviceWorker.register('service-worker.js');
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
 }
 
 render(
@@ -16,9 +20,4 @@ render(
 render(
   <OghamOutput state={getAppState()} />,
   document.getElementById('ogham-output')
-);
-
-render(
-  <Popup state={getAppState()} />,
-  document.getElementById('popup')
 );

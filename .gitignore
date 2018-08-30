@@ -1,4 +1,9 @@
-public/js/*.js
+# These will be generated
+public/bundle.*.js
+public/index.*.css
+public/index.html
+public/sw.js
+precache-manifest.*
 
 node_modules
 *.log
