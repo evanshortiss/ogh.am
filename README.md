@@ -14,7 +14,7 @@ transliterate latin characters to Ogham.
 This is the source for my online ogham transliterator progressive web
 application (PWA) at https://ogh.am. Checkout the screenshot of it on iOS below!
 
-![](https://github.com/evanshortiss/ogh.am/raw/master/screenshots/ios.png)
+![](https://github.com/evanshortiss/ogh.am/raw/master/screenshots/android-ios.png)
 
 I built this as a learning exercise for modern web tooling and PWAs and because
 it was fun. I wanted to make it work entirely offline, including the generation
