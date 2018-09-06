@@ -68,14 +68,16 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
   render(props: OghamInputProps, state: OghamInputState) {
     return (
       <form action="" onSubmit={e => this.handleSubmit(e)}>
-        <label for="plaintext">Text to Transliterate</label>
-        <input
-          pattern="^[a-zA-Záéíúó ]+$"
-          name="plaintext"
-          onKeyUp={e => this.onChange(e)}
-          value={this.props.state.getInputText()}
-          type="text"
-        />
+        <label for="plaintext">
+          Text to Transliterate
+          <input
+            pattern="^[a-zA-Záéíúó ]+$"
+            name="plaintext"
+            onKeyUp={e => this.onChange(e)}
+            value={this.props.state.getInputText()}
+            type="text"
+          />
+        </label>
       </form>
     );
   }
