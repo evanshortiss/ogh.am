@@ -206,6 +206,7 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
             <a
               class="button button-primary"
               target="_blank"
+              rel="noopener"
               href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ogh.am"
             >
               Share &nbsp;&nbsp;
