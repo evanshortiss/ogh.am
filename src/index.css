@@ -1,6 +1,7 @@
 @font-face {
-	font-family: "BabelStone Ogham";
-	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
+  font-family: "BabelStone Ogham";
+  font-display: swap;
+	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fons/BabelStoneOghamR.woff") format("woff");
 }
 
 button.button-primary, .button.button-primary {

@@ -17,6 +17,15 @@
             "value": "no-cache"
           }
         ]
+      },
+      {
+        "source" : "**/*.@(jpg|jpeg|gif|png|woff|css|js)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=604800"
+          }
+        ]
       }
     ],
     "rewrites": [
