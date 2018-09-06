@@ -10,6 +10,7 @@
     "start": "concurrently 'webpack --config webpack.dev.js --watch' 'http-server -p 3030 -c0 ./public'",
     "build": "webpack -p --config webpack.prod.js",
     "deploy": "npm run build && firebase deploy",
+    "deploy-ci": "npm run build && firebase deploy --token $FIREBASE_TOKEN --non-interactive",
     "serve": "http-server -p 3030 -c0 ./public"
   },
   "author": "Evan Shortiss <evanshortiss@gmail.com> (http://evanshortiss.com/)",

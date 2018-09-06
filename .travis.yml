@@ -1,14 +1,14 @@
 language: node_js
 
+branches:
+  only:
+  - master
+
 before_install:
-  - npm i -g npm@6
+- npm i -g npm@6
 
 after_success:
-  - npm run build
+- npm run deploy-ci
 
-deploy:
-  provider: firebase
-  token:
-    secure: jWxZnEFF2q8/R1x9kvz4EDrYxLunbvYwgm1HSHXZxYi/+PVVoK0twrURm4EaOAB25LUKrdnot/S0Dungy+02A7sGXdO1DOaETP+D4DZ2eStYryoTaPVrGJwGrRlPLLiWktPST8dZfsUjb15N7ZwEuBsjT8b/D6ZusEIDxBznZm7YCbRaGZt+SHlsW+rYTBQtTVrXNnF7kwk/DT++krBRbt6+bmDQoz5z6/9CCTPrE8MZddSTWzFid59EdHQ30yV7nWvbQdfuhL+JqynJ4NdsT2Rpg9vnIk06SIjRpSqfH0TplbeWU4coAfgxHYuxvNupLWX46fZ4iQ7Mn1xkfDUoNPwRLY1kcECwlPSiH3jXesVl17Exkr5UI1dV4HH1j3b2FOyIp7Gaw+MAOXH5UKE3FoAW0p6ROlxvDFjhBWlmezzSj/3C/4Q2hExNqUrEG8Nu64UZ/sYQzY9CGoqL8okzBZy2918+MncBEMcIqIiNdigucXVSWQXjNjcym7K8VP7lTMFBv+AVRyP9LFzFSlgKDbs1WzbT1hpy6TOXTLY3AejXTzqsRyuaNdGN4IY5IejXsp/s6Kkt2j0vMaOCLGfCOFtv2rWkD7OIeRwB0mJ4Fem7XCPcXCPXfyBb7JG+TVUit8+lCn3GTQXKqknzHgKF9ESMgcSVnR6ffBawYdD6hLw=
-  on:
-    branch: master
+env:
+  secure: o9OEpgH4VhabG6UDgU+CywzGryvR1svs4S+hiLBoClomzvBPXsBW+dJTs/1dm8hPdU0K00WPwp3caAsnRrRC5ch9TdE1LHGXVCyoZ66MW6OiYhs5wpozvvCz0/SNkMQoCvwAlJ0k6lY1P2S/kGvaAA6Mi8FptgLhjoSdqe+Qk58gwsOxYS2quILUkry7MRIOFktJKgC2E+mLDGbWs94dDrlPxd4LpkwkwZFLg9H7ttcateF7Pvj0O6r3Rcaa2caAB8nspvdzEOphNiKpXDqfQsZrLGtfbJwRxTxByliDqJ9iMZc7+wRP6PBgef5cJYgYkqxO9XZc7rl2V6ntfRxqemnTosj2ZHrBhaHqhLJ1XUEXAVnqgdYQ5Ikf/s15MPytiPVsUU1dCh646svM78an3Y38HrsjHTOlX+jY6cJlXjRLETAWFaIwO8fFOITwFDNGcKhUN3s4h54L7xVhXgpSbaoRmgk7nrU2HhsyxoBHVW247gJ1aNU2EYG+ovBamV/oEm/A/+hytgGcb0tNm3/ahBmMA5Vs7esorOTmgYyfERK9fui+mo6RzHXDUaDb3IKzNxqTcQb28T0fqfyrwXrn2lXFZqSDQKfBzQGe9bEOZvrFAVPvI9qcg1mnH+jUaVJX1jsb/VApUkCMJCAHT1tjaYjgixQVwPMgBXFlKD5RMQw=
