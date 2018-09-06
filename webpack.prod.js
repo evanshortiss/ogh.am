@@ -36,7 +36,7 @@ const prodOpts = {
   ]
 }
 
-if (process.env.CI || process.env.TRAVIS) {
+if (!process.env.CI) {
   prodOpts.plugins.push(new BundleAnalyzerPlugin())
 }
 
