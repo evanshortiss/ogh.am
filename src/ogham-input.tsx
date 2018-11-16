@@ -42,7 +42,7 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
       );
     };
 
-    const form = (e.target as HTMLElement).parentElement as HTMLFormElement;
+    const form = (e.target as HTMLElement).parentElement.parentElement as HTMLFormElement;
     const valid = form.reportValidity();
 
     if (!valid) {
