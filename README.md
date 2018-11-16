@@ -58,3 +58,13 @@ $ npm start
 
 Changes to anything in the `src/` folder are watched and automatically compiled,
 so just refresh or force refresh to view changes.
+
+
+## Generating Font Face Subset
+
+```
+npm install -g glyphhanger
+pip install fonttools
+glyphhanger http://localhost:3030 --subset=*.woff > glyphs
+pyftsubset ./public/fonts/BabelStoneOghamR.copy.woff --unicodes-file=./glyphs --flavor=woff
+```
