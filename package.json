@@ -1,6 +1,6 @@
 {
   "name": "ogh.am",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is the source for my online ogham transliterator progressive web application (PWA) at https://ogh.am. Checkout the screenshots of it on iOS and Android below!",
   "main": "index.js",
   "scripts": {
