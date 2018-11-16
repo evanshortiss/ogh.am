@@ -9,6 +9,7 @@ node_modules
 *.log
 package-lock.json
 .DS_Store
+.firebase
 
 # font face trimming tmp files
 glyphs

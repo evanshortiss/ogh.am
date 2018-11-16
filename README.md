@@ -66,5 +66,5 @@ so just refresh or force refresh to view changes.
 npm install -g glyphhanger
 pip install fonttools
 glyphhanger http://localhost:3030 --subset=*.woff > glyphs
-pyftsubset ./public/fonts/BabelStoneOghamR.copy.woff --unicodes-file=./glyphs --flavor=woff
+pyftsubset ./public/fonts/BabelStoneOghamR.woff --unicodes-file=./glyphs --flavor=woff
 ```
