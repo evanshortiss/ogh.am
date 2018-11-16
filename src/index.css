@@ -4,6 +4,12 @@
 	src: local("BabelStone Ogham"), local("BabelStoneOgham"), url("fonts/BabelStoneOghamR.woff") format("woff");
 }
 
+@media screen and (orientation:landscape) {
+  .header-image {
+    display: none;
+  }
+}
+
 button.button-primary, .button.button-primary {
   background-color: #2ecc71;
   border-color: #2ecc71;
@@ -49,6 +55,7 @@ footer div {
 
 * {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -77,10 +84,6 @@ form {
 }
 
 @media screen and (max-device-width: 480px) {
-  .header-image {
-    /* height: 37.5vh; */
-  }
-
   .header-image h3 {
     margin-top: 3vh;
   }
@@ -115,8 +118,10 @@ form {
 }
 #ogham-input form input {
   font-size: 14pt;
+  width: 80%;
   text-align: center;
-  margin-top: 0.5em;
+  display: block;
+  margin: 1em auto;
 }
 
 #ogham-output .row {
