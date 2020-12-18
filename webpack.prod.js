@@ -1,5 +1,6 @@
 'use strict'
 
+const env = require('env-var')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
@@ -36,7 +37,7 @@ const prodOpts = {
   ]
 }
 
-if (!process.env.CI) {
+if (!env.get('CI').asBool() && !env.get('DEPLOY').asBool()) {
   prodOpts.plugins.push(new BundleAnalyzerPlugin())
 }
 
