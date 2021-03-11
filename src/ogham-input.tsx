@@ -47,7 +47,7 @@ export class OghamInput extends Component<OghamInputProps, OghamInputState> {
     const valid = form.reportValidity();
 
     if (!valid) {
-      // Do not show any Ogham, this avoids confusion hopfully
+      // Do not show any Ogham, this avoids confusion hopefully
       this.props.state.setInputText(new Array(el.value.length).join(' '));
     } else {
       // Convert symbols to regular letters and don't allow spaces

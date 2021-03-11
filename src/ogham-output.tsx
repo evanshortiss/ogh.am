@@ -68,8 +68,8 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
   }
 
   copyOghamToClipboard() {
-    copy(this.getTextAsOgham());
-    alert(`Copied ${this.getTextAsOgham()} to clipboard!`);
+    copy(this.getTextAsOgham())
+    alert(`Copied ${this.getTextAsOgham()} to clipboard!`)
   }
 
   copyLinkToClipboard() {
@@ -88,7 +88,8 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
     return (
       <div class="center">
         <div style="display: inline-grid;">
-          <h2 class="vertical" style={"font-family: 'BabelStone Ogham'"}>
+          {/* white-space: pre fixes an off-center rendering caused by spaces */}
+          <h2 class="vertical" style={"font-family: 'BabelStone Ogham'; white-space: pre;"}>
             {this.getTextAsOgham()}
           </h2>
         </div>
