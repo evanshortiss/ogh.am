@@ -31,14 +31,16 @@ export class OghamOutput extends Component<OghamOutputProps, OghamOutputState> {
   downloadImage(e: Event) {
     const data = render(this.getTextAsOgham()).toDataURL('image/jpeg', 0.5);
 
-    if (isAppleMobileDevice()) {
-      window.open(data, '_blank');
-    } else {
+    // TODO: find out which older iOS versions require this
+    // and update the check with a version number
+    // if (isAppleMobileDevice()) {
+    //   window.open(data, '_blank');
+    // } else {
       const el = e.target as HTMLAnchorElement;
       const filename = this.state.plaintext.toLowerCase().replace(/ /gi, '-');
       el.href = render(this.getTextAsOgham()).toDataURL();
       el.download = `ogham-${filename}`;
-    }
+    // }
   }
 
   shareViaTwitter() {
